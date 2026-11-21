@@ -1,0 +1,16 @@
+{
+  "name": "super-ai-astra-infinity-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "SUPER AI ASTRA infinity V2 - multi-provider orchestration web app",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.77.0",
+    "pdf-parse": "^1.1.1",
+    "mammoth": "^1.9.0",
+    "xlsx": "^0.18.5"
+  }
+}

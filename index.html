@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#13070d">
+<title>SUPER AI ASTRA ∞ V2</title><link rel="stylesheet" href="/style.css"></head>
+<body><div class="layout">
+<aside class="sidebar"><div class="brand"><div class="logo">∞</div><div><b>SUPER AI ASTRA ∞</b><small>INFINITY MULTI-AGENT · V2</small></div></div>
+<button class="primary full" id="newJob">＋ Tạo nhiệm vụ mới</button>
+<div class="nav-label">WORKSPACE</div><button class="nav active" data-view="command">◈　Trung tâm điều khiển</button><button class="nav" data-view="agents">✧　Đội ngũ AI</button><button class="nav" data-view="workflow">⇄　Quy trình 6 giai đoạn</button><button class="nav" data-view="history">▤　Lịch sử nhiệm vụ</button>
+<div class="side-bottom"><span class="dot" id="healthDot"></span><span id="healthText">Đang kiểm tra hệ thống</span></div></aside>
+<main class="main"><header class="top"><div class="mobile-title">∞ <b>SUPER AI ASTRA ∞</b></div><div class="status"><span class="dot" id="topDot"></span><span id="topStatus">CORE CHECKING</span></div><span class="version">V2.0</span></header>
+<section class="hero"><div class="hero-symbol">∞</div><div class="overline">AUTONOMOUS MULTI-AGENT WORKSPACE</div><h1>SUPER AI <em>ASTRA ∞</em></h1><p>Một yêu cầu · Đúng chuyên gia · Có kiểm tra · Bàn giao minh bạch</p><div class="hero-tags"><span>AI ORCHESTRATION</span><span>IMAGE & FILE INPUT</span><span>MANUAL + AUTO CONTROL</span></div></section>
+<section class="content" id="commandView">
+<div class="heading"><div><div class="overline">COMMAND CENTER</div><h2>Gửi nhiệm vụ cho ASTRA</h2></div><span class="pill">AUTO + MANUAL</span></div>
+<div class="composer card"><textarea id="prompt" placeholder="Mô tả mục tiêu của bạn. Ví dụ: Xây dựng game RPG anime 3D bằng Godot, lập kế hoạch nhân vật, kỹ năng, hiệu ứng và âm thanh..." rows="4"></textarea>
+<div class="attached" id="fileList"></div>
+<div class="dispatch-settings"><label for="dispatchMode">CHẾ ĐỘ ĐIỀU PHỐI</label><select id="dispatchMode"><option value="auto">Tự động chọn AI phù hợp</option><option value="manual">Tự chọn nhóm AI (thủ công)</option></select></div>
+<div id="manualAgents" class="manual-agents hidden">
+  <label><input type="checkbox" value="code" checked> Lập trình</label><label><input type="checkbox" value="image" checked> Hình ảnh</label>
+  <label><input type="checkbox" value="video"> Video</label><label><input type="checkbox" value="threeD"> 3D & hoạt hình</label>
+  <label><input type="checkbox" value="vfx"> Hiệu ứng</label><label><input type="checkbox" value="audio"> Âm thanh</label>
+  <label><input type="checkbox" value="qa" checked> Kiểm thử</label>
+</div>
+<div class="composer-foot"><div class="attach"><label for="files">＋ Đính kèm ảnh / tệp</label><input id="files" type="file" multiple accept="image/*,.txt,.md,.csv,.json,.pdf,.docx,.xlsx,.xls,.zip"><small>Tối đa 8 tệp · 15 MB/tệp</small></div><button class="primary" id="submit">Phân tích & phân công　➜</button></div></div>
+<div id="jobPanel" class="job-panel hidden"></div>
+<div class="grid-two"><div class="card panel"><div class="panel-head"><div><div class="overline">AI NETWORK</div><h3>Trạng thái kết nối</h3></div><span class="pill" id="providerCount">0 PROVIDERS</span></div><div id="providerList" class="providers"></div></div>
+<div class="card panel"><div class="overline">WORKFLOW CONTROL</div><h3>Quy trình vận hành</h3><div class="workflow-mini"><div><i>01</i><span><b>Tiếp nhận & phân tích</b><small>Xác định mục tiêu, tài nguyên</small></span></div><div><i>02</i><span><b>Chọn AI chuyên môn</b><small>Kiểm tra API và khả năng</small></span></div><div><i>03</i><span><b>Thực hiện theo thứ tự</b><small>Giao việc, nhận đầu ra</small></span></div><div><i>04</i><span><b>Tích hợp sản phẩm</b><small>Kiểm tra định dạng</small></span></div><div><i>05</i><span><b>Kiểm thử & tối ưu</b><small>Đối chiếu tiêu chí</small></span></div><div><i>06</i><span><b>Bàn giao</b><small>Báo cáo phần hoàn thành</small></span></div></div></div></div>
+</section>
+<section id="agentsView" class="content hidden"><div class="heading"><div><div class="overline">SPECIALIST NETWORK</div><h2>Đội ngũ AI chuyên môn</h2></div></div><div id="allProviders" class="agent-grid"></div><p class="notice">Lưu ý: trạng thái “Chưa kết nối” là đúng thực tế. Tên nhà cung cấp chỉ là nhóm tích hợp dự kiến; cần API/SDK và quyền truy cập riêng.</p></section>
+<section id="workflowView" class="content hidden"><div class="overline">ORCHESTRATION PIPELINE</div><h2>Quy trình 6 giai đoạn</h2><div class="card workflow-large" id="workflowLarge"></div></section>
+<section id="historyView" class="content hidden"><div class="overline">JOB HISTORY</div><h2>Lịch sử nhiệm vụ</h2><div id="historyList" class="history-list"></div></section>
+<footer>SUPER AI ASTRA ∞ V2 · Điều phối minh bạch · API keys lưu ở máy chủ, không đưa vào trình duyệt</footer></main></div>
+<script src="/app.js"></script></body></html>
